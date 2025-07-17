@@ -1,0 +1,573 @@
+/* 个人信息卡片背景图（适配Butterfly主题常见结构） */
+[data-theme="light"] #aside-content .card-info {
+  background-image: url(https://images.wallpaperscraft.com/image/single/piano_silhouette_space_156662_3415x3415.jpg) !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important; /* 覆盖卡片，避免拉伸 */
+  background-position: center !important;
+}
+[data-theme="dark"] #aside-content .card-info {
+  background-image: url(https://images.wallpaperscraft.com/image/single/piano_silhouette_space_156662_3415x3415.jpg) !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* 页脚与头图透明 */
+#footer {
+  background: transparent !important;
+}
+#page-header {
+  background: transparent !important;
+}
+
+/* 白天模式遮罩透明 */
+#footer::before {
+  background: transparent !important;
+}
+#page-header::before {
+  background: transparent !important;
+}
+
+/* 夜间模式遮罩透明 */
+[data-theme="dark"] #footer::before {
+  background: transparent !important;
+}
+[data-theme="dark"] #page-header::before {
+  background: transparent !important;
+}
+
+/* 日间模式不生效 */
+[data-theme="light"] #site-name,
+[data-theme="light"] #site-title,
+[data-theme="light"] #site-subtitle,
+[data-theme="light"] #post-info {
+  animation: none;
+}
+/* 夜间模式生效 */
+[data-theme="dark"] #site-name,
+[data-theme="dark"] #site-title {
+  animation: light_15px 10s linear infinite;
+}
+[data-theme="dark"] #site-subtitle {
+  animation: light_10px 10s linear infinite;
+}
+[data-theme="dark"] #post-info {
+  animation: light_5px 10s linear infinite;
+}
+/* 关键帧描述 */
+@keyframes light_15px {
+  0% {
+    text-shadow: #5636ed 0 0 15px;
+  }
+  12.5% {
+    text-shadow: #11ee5e 0 0 15px;
+  }
+  25% {
+    text-shadow: #f14747 0 0 15px;
+  }
+  37.5% {
+    text-shadow: #f1a247 0 0 15px;
+  }
+  50% {
+    text-shadow: #f1ee47 0 0 15px;
+  }
+  50% {
+    text-shadow: #b347f1 0 0 15px;
+  }
+  62.5% {
+    text-shadow: #002afa 0 0 15px;
+  }
+  75% {
+    text-shadow: #ed709b 0 0 15px;
+  }
+  87.5% {
+    text-shadow: #39c5bb 0 0 15px;
+  }
+  100% {
+    text-shadow: #5636ed 0 0 15px;
+  }
+}
+
+@keyframes light_10px {
+  0% {
+    text-shadow: #5636ed 0 0 10px;
+  }
+  12.5% {
+    text-shadow: #11ee5e 0 0 10px;
+  }
+  25% {
+    text-shadow: #f14747 0 0 10px;
+  }
+  37.5% {
+    text-shadow: #f1a247 0 0 10px;
+  }
+  50% {
+    text-shadow: #f1ee47 0 0 10px;
+  }
+  50% {
+    text-shadow: #b347f1 0 0 10px;
+  }
+  62.5% {
+    text-shadow: #002afa 0 0 10px;
+  }
+  75% {
+    text-shadow: #ed709b 0 0 10px;
+  }
+  87.5% {
+    text-shadow: #39c5bb 0 0 10px;
+  }
+  100% {
+    text-shadow: #5636ed 0 0 10px;
+  }
+}
+
+@keyframes light_5px {
+  0% {
+    text-shadow: #5636ed 0 0 5px;
+  }
+  12.5% {
+    text-shadow: #11ee5e 0 0 5px;
+  }
+  25% {
+    text-shadow: #f14747 0 0 5px;
+  }
+  37.5% {
+    text-shadow: #f1a247 0 0 15px;
+  }
+  50% {
+    text-shadow: #f1ee47 0 0 5px;
+  }
+  50% {
+    text-shadow: #b347f1 0 0 5px;
+  }
+  62.5% {
+    text-shadow: #002afa 0 0 5px;
+  }
+  75% {
+    text-shadow: #ed709b 0 0 5px;
+  }
+  87.5% {
+    text-shadow: #39c5bb 0 0 5px;
+  }
+  100% {
+    text-shadow: #5636ed 0 0 5px;
+  }
+}
+
+
+:root {
+  --trans-light: rgba(255, 255, 255, 0.88);
+  --trans-dark: rgba(25, 25, 25, 0.88);
+  --border-style: 1px solid rgb(169, 169, 169);
+  --backdrop-filter: blur(5px) saturate(150%);
+}
+
+/* 首页文章卡片 */
+#recent-posts > .recent-post-item {
+  background: var(--trans-light);
+  backdrop-filter: var(--backdrop-filter);
+  border-radius: 25px;
+  border: var(--border-style);
+}
+
+/* 首页侧栏卡片 */
+#aside-content .card-widget {
+  background: var(--trans-light);
+  backdrop-filter: var(--backdrop-filter);
+  border-radius: 18px;
+  border: var(--border-style);
+}
+
+/* 文章页、归档页、普通页面 */
+div#post,
+div#page,
+div#archive {
+  background: var(--trans-light);
+  backdrop-filter: var(--backdrop-filter);
+  border: var(--border-style);
+  border-radius: 20px;
+}
+
+/* 导航栏 */
+#page-header.nav-fixed #nav {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: var(--backdrop-filter);
+}
+
+[data-theme="dark"] #page-header.nav-fixed #nav {
+  background: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* 夜间模式遮罩 */
+[data-theme="dark"] #recent-posts > .recent-post-item,
+[data-theme="dark"] #aside-content .card-widget,
+[data-theme="dark"] div#post,
+[data-theme="dark"] div#archive,
+[data-theme="dark"] div#page {
+  background: var(--trans-dark);
+}
+
+
+/* 夜间模式页脚页头遮罩透明 */
+[data-theme="dark"] #footer::before {
+  background: transparent !important;
+}
+[data-theme="dark"] #page-header::before {
+  background: transparent !important;
+}
+
+/* 阅读模式 */
+.read-mode #aside-content .card-widget {
+  background: rgba(158, 204, 171, 0.5) !important;
+}
+.read-mode div#post {
+  background: rgba(158, 204, 171, 0.5) !important;
+}
+
+/* 夜间模式下的阅读模式 */
+[data-theme="dark"] .read-mode #aside-content .card-widget {
+  background: rgba(25, 25, 25, 0.9) !important;
+  color: #ffffff;
+}
+[data-theme="dark"] .read-mode div#post {
+  background: rgba(25, 25, 25, 0.9) !important;
+  color: #ffffff;
+}
+
+
+/* 帧率检测 */
+#fps {
+  position: fixed;
+  /* 指定位置 */
+  left: 10px;
+  bottom: 10px;
+  z-index: 1919810;
+}
+[data-theme="light"] #fps {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: var(--backdrop-filter);
+  padding: 4px;
+  border-radius: 4px;
+}
+[data-theme="dark"] #fps {
+  background-color: rgba(0, 0, 0, 0.72);
+  backdrop-filter: var(--backdrop-filter);
+  padding: 4px;
+  border-radius: 4px;
+}
+
+
+/*------------- 自定义字体 ------------------*/
+@font-face {
+  /* 为载入的字体取名字(随意) */
+  font-family: 'redbean';	
+  /* 字体文件地址(相对或者绝对路径都可以，/source 为根目录 /) */
+  src: url(/font/ZhuZiAWan.woff2);
+  /* 定义加粗样式(加粗多少) */
+  font-weight: normal;
+  /* 定义字体样式(斜体/非斜体) */
+  font-style: normal;
+  /* 定义显示样式 */
+  font-display: block;
+}
+/*------------- 自定义字体end ------------------*/
+
+
+/* 雪花特效 */
+[data-theme="light"] #snow{
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -2;
+}
+
+/* 雪花黑夜模式不显示 */
+[data-theme="dark"] #snow{
+  display: none;
+}
+
+
+
+/* 菜单容器 - 水平居中且垂直居中 */
+#nav .menus_items {
+  position: absolute !important;
+  width: fit-content !important;
+  left: 50% !important;
+  top: 50% !important; /* 新增 */
+  transform: translate(-50%, -50%) !important; /* 修改 */
+  display: flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 菜单项 - 垂直居中 */
+#nav .menus_items .menus_item {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+}
+
+/* 修复二级菜单位置 */
+#nav .menus_items .menus_item_child {
+  top: 100% !important; /* 确保二级菜单在菜单项下方 */
+  margin-top: 0 !important;
+}
+
+/* 保留原有的二级菜单位置调整 */
+.menus_items .menus_item:nth-child(3) .menus_item_child {
+  left: -115px !important;
+}
+.menus_items .menus_item:nth-child(2) .menus_item_child {
+  left: -80px !important;
+}
+
+/* 悬停显示二级菜单 */
+#nav .menus_items .menus_item:hover .menus_item_child {
+  display: flex !important;
+}
+
+/* 导航栏背景样式保持不变 */
+#page-header.nav-fixed #nav {
+  background: linear-gradient(60deg, #ffd7e4 0, #c8f1ff 93%) !important;
+  opacity: 0.95 !important;
+  backdrop-filter: var(--backdrop-filter) !important;
+}
+[data-theme="dark"] #page-header.nav-fixed #nav {
+  background: rgba(0, 0, 0, 0.95) !important;
+}
+
+
+
+/* 仅针对文章页的标题添加星星（通过#post选择器限定范围） */
+#post h1::before,
+#post h2::before,
+#post h3::before,
+#post h4::before,
+#post h5::before,
+#post h6::before {
+  content: "⭐"; /* 默认显示星星 */
+  display: inline-block;
+  -webkit-animation: ccc 4s linear infinite;
+  animation: ccc 4s linear infinite;
+}
+
+/* 旋转动画 */
+@keyframes ccc {
+  0% { transform: rotate(0deg); }
+  to { transform: rotate(-1turn); }
+}
+
+/* 各层级标题的星星样式调整 */
+#post #content-inner.layout h1::before {
+  margin-left: -1.55rem;
+  font-size: 1.3rem;
+  margin-top: -0.23rem;
+}
+/* 其他h2-h6的样式保持不变... */
+
+/* 鼠标悬停时变为闪烁星星 */
+#post h1:hover::before,
+#post h2:hover::before,
+#post h3:hover::before,
+#post h4:hover::before,
+#post h5:hover::before,
+#post h6:hover::before {
+  content: "🌟";
+  -webkit-animation: ccc 2s linear infinite;
+  animation: ccc 2s linear infinite;
+}
+
+/* 强制覆盖可能存在的回形针样式 */
+#content-inner.layout h1::before,
+#content-inner.layout h2::before,
+#content-inner.layout h3::before,
+#content-inner.layout h4::before,
+#content-inner.layout h5::before,
+#content-inner.layout h6::before {
+  content: "⭐" !important;
+  font-family: inherit !important; /* 移除可能继承的图标字体 */
+}
+
+
+/* tzy页脚样式 */
+
+
+
+/* 新的#ft样式：确保内部内容块居中且文本左对齐（保持内容布局） */
+#ft {
+  max-width: 1200px;
+  width: 100%; /* 占满父容器宽度，避免过窄 */
+  margin: 0 auto 12px;
+  display: flex;
+  color: rgb(255 255 255 / 80%) !important;
+  text-align: left; /* 保持内容（文字、链接）左对齐，更美观 */
+  flex-wrap: wrap;
+}
+/* #ft {
+  max-width: 1200px;
+  margin: 0 auto 12px;
+  display: flex;
+  color: rgb(255 255 255 / 80%) !important;
+  text-align: left;
+  flex-wrap: wrap;
+} */
+
+
+
+/* tzy页脚样式 */
+#footer-wrap {
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#ft {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto 12px;
+  display: flex;
+  color: rgb(255 255 255 / 80%) !important;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ft-item-1 {
+  flex: 1;
+  padding: 0;
+}
+
+.t-top {
+  display: flex;
+  justify-content: center;
+}
+
+.t-top .t-t-l {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+}
+
+.t-top .t-t-l .bg-ad {
+  width: 100%;
+  border-radius: 10px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.btn-xz-box {
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+/* 按钮背景颜色等 */
+.btn-xz {
+  display: block;
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  text-align: center;
+  line-height: 2.4;
+  margin: 8px 0;
+  border-radius: 30px; /* 保持按钮圆角 */
+}
+
+.btn-xz:hover {
+  text-decoration: none !important;
+}
+
+/* 按钮悬浮颜色 */
+.btn-xz-box:hover .btn-xz {
+  background-color: var(--text-bg-hover);
+}
+
+.ft-t {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+/* 响应式样式 */
+@media screen and (max-width: 768px) {
+  .t-top .t-t-l .bg-ad {
+    width: 100%;
+  }
+}
+
+/* 页脚心跳动画 */
+#heartbeat {
+  color: red;
+  animation: iconAnimate 1s ease-in-out infinite;
+}
+
+@-moz-keyframes iconAnimate {
+  0%, 100% { transform: scale(1); }
+  10%, 30% { transform: scale(0.9); }
+  20%, 40%, 60%, 80% { transform: scale(1.1); }
+  50%, 70% { transform: scale(1.1); }
+}
+
+@-webkit-keyframes iconAnimate {
+  0%, 100% { transform: scale(1); }
+  10%, 30% { transform: scale(0.9); }
+  20%, 40%, 60%, 80% { transform: scale(1.1); }
+  50%, 70% { transform: scale(1.1); }
+}
+
+@-o-keyframes iconAnimate {
+  0%, 100% { transform: scale(1); }
+  10%, 30% { transform: scale(0.9); }
+  20%, 40%, 60%, 80% { transform: scale(1.1); }
+  50%, 70% { transform: scale(1.1); }
+}
+
+@keyframes iconAnimate {
+  0%, 100% { transform: scale(1); }
+  10%, 30% { transform: scale(0.9); }
+  20%, 40%, 60%, 80% { transform: scale(1.1); }
+  50%, 70% { transform: scale(1.1); }
+}
+
+/* 让版权信息、框架声明、自定义文本居中 */
+.copyright,
+.framework-info,
+.footer_custom_text {
+  text-align: center;
+  margin: 8px 0;
+}
+
+/* 让运行时间（#workboard）和徽标（#ghbdages）居中 */
+#workboard,
+#ghbdages {
+  text-align: center;
+  margin: 10px 0;
+  width: 100%;
+}
+/* 
+svg.icon {
+    width: 1.30em;
+    height: 1.30em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+  } */
+
+
+/* svg.icon {
+    width: 1.28em;
+    height: 1.28em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+} */
+
+
