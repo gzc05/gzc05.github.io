@@ -257,21 +257,6 @@ div#archive {
 }
 
 
-/*------------- 自定义字体 ------------------*/
-@font-face {
-  /* 为载入的字体取名字(随意) */
-  font-family: 'redbean';	
-  /* 字体文件地址(相对或者绝对路径都可以，/source 为根目录 /) */
-  src: url(/font/ZhuZiAWan.woff2);
-  /* 定义加粗样式(加粗多少) */
-  font-weight: normal;
-  /* 定义字体样式(斜体/非斜体) */
-  font-style: normal;
-  /* 定义显示样式 */
-  font-display: block;
-}
-/*------------- 自定义字体end ------------------*/
-
 
 /* 雪花特效 */
 [data-theme="light"] #snow{
@@ -321,10 +306,10 @@ div#archive {
 
 /* 保留原有的二级菜单位置调整 */
 .menus_items .menus_item:nth-child(3) .menus_item_child {
-  left: -115px !important;
+  left: -150px !important;
 }
 .menus_items .menus_item:nth-child(2) .menus_item_child {
-  left: -80px !important;
+  left: -120px !important;
 }
 
 /* 悬停显示二级菜单 */
